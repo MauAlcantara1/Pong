@@ -6,7 +6,6 @@ public class Navegacion2 : MonoBehaviour
 {
     void Update()
     {
-        // Detecta si se presionó la barra espaciadora
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             MainAConfig();

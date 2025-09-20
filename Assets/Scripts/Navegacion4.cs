@@ -1,12 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.InputSystem; // Importa el nuevo sistema
+using UnityEngine.InputSystem; 
 
 public class Navegacion4 : MonoBehaviour
 {
     void Update()
     {
-        // Detecta si se presionó la barra espaciadora
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             Config2AJuego();
@@ -15,6 +14,6 @@ public class Navegacion4 : MonoBehaviour
 
     public void Config2AJuego()
     {
-        SceneManager.LoadScene("Juego");
+        SceneManager.LoadScene("JuegoIA");
     }
 }

@@ -9,11 +9,11 @@ public class MusicManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // Mantener al cambiar de escena
+            DontDestroyOnLoad(gameObject); 
         }
         else
         {
-            Destroy(gameObject); // Evita duplicados
+            Destroy(gameObject); 
         }
     }
 }

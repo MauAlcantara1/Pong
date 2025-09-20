@@ -1,16 +1,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.InputSystem; // Importa el nuevo sistema
+using UnityEngine.InputSystem; 
 
 public class Navegacion3 : MonoBehaviour
 {
     void Update()
     {
-       // Detecta si se presionó la tecla Enter
-if (Keyboard.current.enterKey.wasPressedThisFrame)
-
+        if (Keyboard.current.digit1Key.wasPressedThisFrame) 
         {
             ConfigAConfig2();
+        }
+
+        if (Keyboard.current.digit2Key.wasPressedThisFrame) 
+        {
+            ConfigAConfig3();
         }
     }
 
@@ -18,6 +21,9 @@ if (Keyboard.current.enterKey.wasPressedThisFrame)
     {
         SceneManager.LoadScene("Config2");
     }
+    
+    public void ConfigAConfig3()
+    {
+        SceneManager.LoadScene("JuegoJcJ");
+    }
 }
-
-
