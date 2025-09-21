@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class Pelota : MonoBehaviour
+public class PelotaIA : MonoBehaviour
 {
-    Juego miJuego;
+    JuegoIA miJuego;
     private AudioSource audioSource; // renombrado
     public AudioClip snd1, snd2, sndGol, sndPared;
 
@@ -14,7 +14,7 @@ public class Pelota : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
-        miJuego = GameObject.Find("Juego").GetComponent<Juego>();
+        miJuego = GameObject.Find("JuegoIA").GetComponent<JuegoIA>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -27,13 +27,21 @@ public class Pelota : MonoBehaviour
             Debug.Log("Colision gol");
 
             if (collision.name == "porteriaIzq")
+            {
                 golesJugadorDer++;
+                Debug.Log(golesJugadorDer);
+            }
             else if (collision.name == "porteriaDer")
+            {
                 golesJugadorIzq++;
+                Debug.Log(golesJugadorIzq);
+            }
 
             miJuego.EscribeMarcador();
+            Debug.Log("GolmarcadoPelota");
         }
     }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

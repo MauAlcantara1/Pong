@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.InputSystem; // 👈 nuevo Input System
+using UnityEngine.InputSystem;
 
 public class Movimiento : MonoBehaviour
 {
